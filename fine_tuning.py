@@ -295,6 +295,7 @@ def main():
     )
 
     logger.info("Evaluation starting...")
+    
     results = fine_tuner.evaluate_on_test_set(test_data, model_dir=output_dir)
     print(results)
     results_json = os.path.join(RESULTS_DIR, "Qwen3-4B_qlora_results.json")
